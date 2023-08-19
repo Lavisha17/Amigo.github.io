@@ -1,0 +1,298 @@
+<head>
+<title>Amigo</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #36013F;
+}
+
+li a {
+  display: block;
+  color: #ffffff;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #F9B7FF;
+  color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --secondary-color: #151226;
+  --contrast-color: #BF307F;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -10;
+  background-color: var(--contrast-color);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  animation: expand .8s ease forwards;
+  background-color: var(--secondary-color);
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: all .8s ease;
+}
+
+.container_content {
+ width: 50%;
+}
+
+.container_content_inner {
+  width: 80%;
+  margin-left: 80px;
+}
+
+.container_outer_img {
+  margin: 50px;
+  width: 50%;
+  overflow: hidden;
+}   
+    
+.container_img {
+  width: 100%;
+  animation: slideIn 1.5s ease-in-out forwards;
+}
+
+.par {
+  height: auto;
+  overflow: hidden;
+}
+
+p{
+  line-height: 28px;
+  transform: translateY(300px);
+  animation: slideUp .8s ease-in-out forwards .8s;
+}
+
+.btns {
+  height: 100%;
+  position: relative;
+  width: 150px;
+  overflow: hidden;
+}
+
+.btns_more {
+  background: transparent;
+  border: 1px solid var(--contrast-color);
+  border-radius: 50px;
+  padding: 8px 12px;
+  color: #BF307F;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 15px;
+  outline: none;
+  transform: translateY(50px);
+  animation: slideUp .8s ease-in-out  forwards 1s;
+}
+
+.title {
+  overflow: hidden;
+  height: auto;
+}
+
+h1 {
+    font-size: 40px;
+    color: var(--contrast-color);
+    margin-bottom: 20px;
+    transform: translateY(100px);
+    animation: slideUp .8s ease forwards .5s;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+footer {
+    text-align:center;
+    padding: 5px;
+    background-color: #ccccff;
+    color: #000;
+}
+.column {
+          float: left;
+          width: 50%;
+          height: 125px;
+          background-color: #ccccff;
+          color: #000;
+         }
+#shareicons img {
+width: 50px;
+padding: 10px;
+display: inline;
+}
+</style>
+
+<script>
+    function website(){
+       window.open("see_more.html");
+   }
+</script>
+</head>
+
+<body>
+<div class= 'container'>
+<ul>
+  <li><a class="active" href="explore.html">Home</a></li>
+  <li><a href="Music_Dance.html">Music and Dance</a></li>
+  <li><a href="wr.html">Literature</a></li>
+  <li><a href="Sports.html">Sports</a></li>
+  <li><a href="anime.html">Anime</a></li>
+  <li><a href="Contact.html">Contact</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="login.html">Login</a>
+   <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+   <lord-icon
+    src="https://cdn.lordicon.com/hqrgkqvs.json"
+    trigger="hover"
+    colors="outline:#121331,primary:#f28ba8,secondary:#ebe6ef"
+    style="width:150px;height:150px">
+   </lord-icon>
+  </li>
+</ul>
+<div class="container_content">
+<div class="container_content_inner">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="title">
+  <h1>Amigo</h1>
+</div>
+<div class="par">
+<p>
+Join the community you enjoy, contribute your opinions, and publish your own wonderful post.
+Keep the streak going by learning something new every day
+</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="btns">
+<button class='btns_more' onclick="return website()"> See more </button>
+</div>
+</div>
+</div>
+<br>
+ <div class="container_outer_img">
+ <div class="img-inner">
+ <img src='logo1.jpg'  alt="" class="container_img"/>
+       </div>
+     </div>
+  </div>
+<div class="overlay"></div>
+
+<footer> 
+<small>
+<div class="column">
+            
+<p>Company
+ 
+                    - About Us<br>
+                    - Privacy Policy<br>
+                    - Contact Us<br>
+</p>
+            </div>
+               
+ <div class="column">
+                 
+<p>Focuses
+                    - Music and Dance<br>
+                    - Literature<br>
+                    - Sports<br>
+                    - Anime<br>
+</p>
+            </div>
+<br><br>
+<p>Please send us your requirements.So we can give best to You! <br>
+Thank You !</p>
+<h3>Share on</h3>
+<div id="shareicons">
+<a href="https://accounts.google.com/signin/v2/identifier?service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+<img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email"/>
+</a>
+<a href="https://www.facebook.com/login/" target="_blank">
+<img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+</a>
+<a href="https://www.google.com/" target="_blank">
+<img src="https://simplesharebuttons.com/images/somacro/google.png"   alt="Google" />
+</a>
+<a href="https://in.linkedin.com/" target="_blank">
+<img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+</a>
+<a href="https://in.pinterest.com/">
+<img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
+</a>
+<a href="javascript:;" onclick="window.print()">
+<img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+</a>
+<a href="https://twitter.com/login?lang=en" target="_blank">
+<img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/>
+</a>
+</div>
+<br><br>
+Copyright © 2023 Amigo-Your Social Friend . All Rights Reserved.<br>
+</small></footer>
+
+</body>

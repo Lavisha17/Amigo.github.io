@@ -1,0 +1,247 @@
+
+<head>
+<title>Sports</title>
+</head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:  #36013F ;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #F9B7FF ;
+}
+
+.active {
+  background-color: #F9B7FF ;
+}
+
+@font-face {
+    font-family: "Telefon Black";
+    src: url(https://production-assets.codepen.io/assets/telefon/black/3f32b1c9-8e26-465e-ae02-ff82a378b670-3-78992f1ed89d5cadb09702e6a0d5bbb0302e85c728c1f8d18fdc8aa56870104c.woff) format("woff"),url(https://production-assets.codepen.io/assets/telefon/black/3f32b1c9-8e26-465e-ae02-ff82a378b670-3-6435f1279663bb84d4a1d8effe0adafbf8499ff6efdd01a59be848c90d8c4c0b.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: "Telefon";
+    src: url(https://production-assets.codepen.io/assets/telefon/bold/af889c53-1ee3-4868-8fdc-2b310d587b50-3-b7a87e0fbd213943fae0c0ef5985635dd43fa9c24876b2725127a13ccaf4ab6a.woff) format("woff"),url(https://production-assets.codepen.io/assets/telefon/bold/af889c53-1ee3-4868-8fdc-2b310d587b50-3-446e9e68a40500d1b24a18331c6d6a78226d276079dcdc2ad9e80a48bdcfd948.woff2) format("woff2")
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('bgg.jpg');
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  clear: both;
+  margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .row {
+    flex-direction: row;
+  }
+}
+
+.skeleton {
+padding:40px;
+  
+}
+.card {
+  background: #fff;
+  margin: 1em;
+  width: 100%;
+  padding-bottom: 0.75em;
+}
+@media (min-width: 600px) {
+  .card {
+    width: 33.333333%;
+  }
+}
+.card_header {
+  background: #d8e1e6;
+}
+.card_header img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.card_text {
+  padding: 1em;
+}
+.card_title {
+  font-size: 2rem;
+  margin-bottom: 1em;
+  font-weight: 200;
+  line-height: 1.2;
+}
+.card_title a {
+  text-decoration: none;
+  color: #496776;
+}
+.card_desc {
+  color: #496776;
+}
+
+h1,.h1 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Telefon Black", Sans-Serif;
+    line-height: 1.1;
+    font-size: 3rem
+}
+
+.pens-title-header {
+    padding-bottom: 10px;
+    border-bottom: 5px solid #0ebeff
+}
+
+/*
+        Pending styles for CSS class based example
+      */
+      .pending {
+        color: #bdc3c7!important;
+        background-color: #bdc3c7!important;
+        border-color: #bdc3c7!important;
+        animation-name: skeletonAnimation;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      .pending_el {
+        color: #ccc !important;
+        background-color: #ccc !important;
+        animation-name: skeletonAnimation;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+      }
+    .bg-image {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    background-image: url('bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 40%
+    }
+
+    @keyframes skeletonAnimation {
+        0% {
+          opacity: 0.8;
+        }
+        50% {
+          opacity: 0.4;
+        }
+        100% {
+          opacity: 0.8;
+        }
+      }
+</style>
+
+<body>
+<ul>
+  <li><a class="active" href="explore.html">Home</a></li>
+  <li><a href="Music_Dance.html">Music and Dance</a></li>
+  <li><a href="wr.html">Literature</a></li>
+  <li><a href="Sports.html">Sports</a></li>
+  <li><a href="anime.html">Anime</a></li>
+  <li><a href="Contact.html">Contact</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="login.html">Login</a></li>
+</ul>
+
+<div class="skeleton">
+  
+
+<div class="content">
+    <div class="title-header pens-title-header">
+	<font color="black">
+        <h1>Sports and Esports</h1> </font>
+    </div>
+    <div class="row" id="picked">
+
+      <div class="card">
+      <figure class="card_header">
+          <a href="#"><img src="single.jpg"></a>
+        </figure>
+        <div class="card_text"><h2 class="card_title">
+          <a href="#"><b>SINGLE PLAYER</b></a></h2>
+
+  <p class="card_desc">"The only one who can tell you ‘you can’t win’ is you and you don’t have to listen.”
+          <br><br><center>
+<script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/bbsvenly.json"
+    trigger="hover"
+    colors="outline:#121331,primary:#3a3347,secondary:#f24c00,tertiary:#646e78"
+    style="width:100px;height:100px">
+</lord-icon></center>
+<br><br>
+          <a href="Singleplayer.html">BUDDY</a>
+          </p>   
+          </div>
+        </div>
+
+      <div class="card">
+      <figure class="card_header">
+        <a href="#"><img src="multi.jpg"></a>
+
+        </figure>
+        <div class="card_text"><h2 class="card_title"><a href="#"><b>MULTI PLAYER</b></a></h2>
+
+<p class="card_desc">"Adorn your Life with Game.Let's Play and Share.”
+          <br><br><center>
+<script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/coowbsor.json"
+    trigger="hover"
+    colors="outline:#121331,primary:#f24c00,secondary:#4bb3fd,tertiary:#ebe6ef"
+    style="width:100px;height:100px">
+</lord-icon></center>
+<br><br>
+          <a href="Multiplayer.html">BUDDY</a>
+          </p> 
+        </div>
+      </div>
+
+     
+</body>

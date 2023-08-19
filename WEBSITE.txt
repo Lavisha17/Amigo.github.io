@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html>
+<title>SignUp_AMIGO</title>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background-image: url('bg1.jpg');
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #3b9c9c;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #c21e56;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+
+<script>
+function storeval()
+{
+let em=document.forms["f"]["email"].value;
+let reg=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+if(em== ""|| !reg.test(em))
+{
+	alert("Enter a valid email ID ");
+	return false;
+}
+let a= document.forms["f"]["psw"].value;
+let b= document.forms["f"]["psw-repeat"].value;
+if(a!=b)
+{
+alert ("Check Your Password");
+return false;
+}
+let mn=document.forms["f"]["mob.no"].value;
+let regp=/^\d{10}$/;
+if(mn==""|| !regp.test(mn))
+{
+alert(" Please enter a valid mobile number ");
+return false;
+}
+var checkBox = document.getElementById("myCheck");
+var text = document.getElementById("text");
+if (checkBox.checked != true){
+   alert("Agree with the Terms and Conditions");
+   return false;
+  }
+
+   var name = document.getElementById('name');
+    var pw = document.getElementById('myInput');
+    var lowerCaseLetters = /[a-z]/g;
+    var upperCaseLetters = /[A-Z]/g;
+    var numbers = /[0-9]/g;
+
+    if(name.value.length == 0){
+        alert('Please fill in email'); return false;
+
+    }else if(pw.value.length == 0){
+        alert('Please fill in password');return false;
+
+    }else if(name.value.length == 0 && pw.value.length == 0){
+        alert('Please fill in email and password');return false;
+
+    }else if(pw.value.length > 8){
+        alert('Max limit of 8 characters for password');return false;
+
+    }else if(!pw.value.match(numbers)){
+        alert('please add 1 number to your password');return false;
+
+    }else if(!pw.value.match(upperCaseLetters)){
+        alert('please add 1 uppercase letter to your password');return false;
+
+    }else if(!pw.value.match(lowerCaseLetters)){
+        alert('please add 1 lowercase letter to your password');return false;
+
+    }else{
+        localStorage.setItem('name', name.value);
+        localStorage.setItem('pw', pw.value);
+        alert('Your account has been created');
+    }
+}
+</script>
+
+<body bgcolor="#fdd7e4">
+<center>
+<form name="f" action="explore.html" onsubmit="return storeval()" method="POST">
+
+<form style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign Up</h1> 
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/bhfjfgqz.json"
+    trigger="hover"
+    colors="primary:#121331"
+    style="width:250px;height:250px">
+</lord-icon>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" id="name"  name="email" required>
+
+  
+
+
+<b>Password</b> <input type="password" id="myInput" placeholder="Enter Password" name="psw" required><br>
+<input type="checkbox" onclick="view()">Show Password
+
+<script>
+function view() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<br><br>
+<ul>
+            <li class="length">Must be at least 8 characters long.</li>
+            <li class="lowercase">Must contain a lowercase letter.</li>
+            <li class="uppercase">Must contain an uppercase letter.</li>
+            <li class="special">Must contain a number or special character.</li>
+</ul>
+<br>
+<br>
+
+    <label for="psw-repeat"><b>Confirm Password</b></label>
+    <input type="password" placeholder="Confirm Password" name="psw-repeat" id="repsw" required>
+    <input type="checkbox" onclick="review()">Show Password
+
+<script>
+function review() {
+  var x = document.getElementById("repsw");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<br>
+<br><br>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember Password
+    </label> <br><br><br>
+
+    <label for="mob.no"><b>Mobile Number</b></label>
+    <input type="text" placeholder="Enter Mobile Number" name="mob.no" required>
+
+   <label for="bd"><b>Birth Date</b></label>
+   <input type="date" placeholder="Enter Birth Date" name="bd" required><br><br>
+ 
+
+   <tr>
+<td> <b> Gender </b> </td>
+<td> <input type="radio" name="gender" checked="checked"> Male
+ <input type="radio" name="gender" checked="checked"> Female 
+ <input type="radio" name="gender" checked="checked"> Other </td>
+</tr>
+
+   
+    
+    <p>By creating an account you agree to our <a href="tc.html" style="color:dodgerblue">Terms & Privacy</a>.<br>
+    <label for="myCheck">I Agree:</label> 
+    <input type="checkbox" id="myCheck" >
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+      <lord-icon
+      src="https://cdn.lordicon.com/cqgtrhpg.json"
+      trigger="hover"
+      colors="outline:#131432,primary:#606874,secondary:#4bb3fd,tertiary:#ebe6ef"
+      style="width:50px;height:50px">
+      </lord-icon>
+    </p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+	
+    </div>
+  </div>
+</form>
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
